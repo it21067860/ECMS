@@ -8,9 +8,12 @@ import Login from "./pages/Login";
 import RegisterUser from "./pages/RegisterUser";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
+import KayAdminDashboard from "./pages/Kay/KayAdminDashboard";
 import Land from "./pages/landing";
 import RegisterHome from "./pages/homeManage";
 import ViewHome from "./pages/ViewHomeManage";
+import KayLogin from "./pages/Kay/KayLogin"
+
 
 
 const App = () => {
@@ -32,6 +35,8 @@ const App = () => {
 
           <Route path="/login" element={<Login />} />
           <Route path="/reg" element={<Register />} />
+          <Route path="/staff-login" element={<KayLogin />} />
+          <Route path="/admin/dashboard" element={<KayAdminDashboard />} />
           
           <Route path="/profile" element={<Profile />} />
           <Route path="/land" element={<Land />} />
