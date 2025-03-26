@@ -40,7 +40,8 @@ app.use("/api/caregivers", require("./routes/KayCaregiverRoutes"));
 app.use("/api/volunteers", require("./routes/KayVolunteerRoutes"));
 app.use("/api/patients", require("./routes/KayPatientRoutes"));
 app.use("/api/homesReg", require("./routes/homeManageRoutes")); // Mount routes here
- // Mount routes here
+app.use("/api/donations", require("./routes/donationRoute"));
+
 // Login/Register Routes
 app.post("/register", (req, res) => {
   const { email, password } = req.body;

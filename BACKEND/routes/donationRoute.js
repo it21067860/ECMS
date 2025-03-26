@@ -1,45 +1,31 @@
 const express = require("express");
 const router = express.Router();
+const {
+  createDonation,
+  getAllDonations,
+  getHomeDonations,
+  approveDonation,
+  rejectDonation,
+  getDonationStats,
+} = require("../controllers/donationController");
 
-// Example route
-router.get("/", (req, res) => {
-  res.send("Donation route is working!");
-});
 
-router.post("/donate", (req, res) => {
-  const donationData = req.body;
-  // Process the donation data here (e.g., save to database)
-  res.status(201).json({ message: "Donation received!", data: donationData });
-});
+// Create a new donation
+router.post("/create", createDonation);
 
-router.get("/donations", (req, res) => {
-  // Fetch donations from the database
-  const donations = []; // Replace with actual data fetching logic
-  res.status(200).json(donations);
-});
+// Get all donations (admin only)
+router.get("/all", getAllDonations);
 
-router.get("/donations/:id", (req, res) => {
-  const donationId = req.params.id;
-  // Fetch the donation from the database using the ID
-  const donation = {}; // Replace with actual data fetching logic
-  if (donation) {
-    res.status(200).json(donation);
-  } else {
-    res.status(404).json({ message: "Donation not found" });
-  }
-});
+// Get donations for a specific home
+router.get("/home/:homeId", getHomeDonations);
 
-router.put("/donations/:id", (req, res) => {
-  const donationId = req.params.id;
-  const updatedData = req.body;
-  // Update the donation in the database
-  res.status(200).json({ message: "Donation updated!", data: updatedData });
-});
+// Approve donation (admin only)
+router.patch("/approve/:id", approveDonation);
 
-router.delete("/donations/:id", (req, res) => {
-  const donationId = req.params.id;
-  // Delete the donation from the database
-  res.status(200).json({ message: `Donation with ID ${donationId} deleted!` });
-});
+// Reject donation (admin only)
+router.patch("/reject/:id", rejectDonation);
+
+// Get donation statistics (admin only)
+router.get("/stats",getDonationStats);
 
 module.exports = router;

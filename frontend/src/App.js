@@ -12,10 +12,11 @@ import KayAdminDashboard from "./pages/Kay/KayAdminDashboard";
 import Land from "./pages/landing";
 import RegisterHome from "./pages/homeManage";
 import ViewHome from "./pages/ViewHomeManage";
-
+import Donationview from "./pages/DanationView";
+import KayLogin from "./pages/Kay/KayLogin";
 import Donation from "./pages/Donation";
-import KayLogin from "./pages/Kay/KayLogin"
-
+import AddDonation from "./pages/AddDonation";
+import AdminDonations from "./pages/Admin/AdminDonations";
 
 const App = () => {
   return (
@@ -39,9 +40,11 @@ const App = () => {
           <Route path="/reg" element={<Register />} />
           <Route path="/staff-login" element={<KayLogin />} />
           <Route path="/admin/dashboard" element={<KayAdminDashboard />} />
-          
+          <Route path="/admin/donations" element={<AdminDonations />} />
+          <Route path="/donationview" element={<Donationview />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/land" element={<Land />} />
+          <Route path="/add-donation/:id" element={<AddDonation />} />
           
 
           {/* Routes from the second code snippet */}
