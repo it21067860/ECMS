@@ -1,0 +1,261 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Container Styles */
+  .home-page, .donation-page, .payment-details, .thank-you, .admin-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Headings */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Buttons */
+  button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  /* Error Messages */
+  span.error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: block;
+  }
+  
+  /* Home Page */
+  .home-page {
+    text-align: center;
+  }
+  
+  .home-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .home-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.2s ease;
+  }
+  
+  .home-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .home-card h2 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 10px;
+  }
+  
+  .home-card p {
+    color: #7f8c8d;
+  }
+  
+  .home-card button {
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  /* Donation Page */
+  .donation-page {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  
+  .donation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .donation-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .donation-form select,
+  .donation-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  
+  .donation-form input:focus,
+  .donation-form select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  
+  /* Payment Details Page */
+  .payment-details {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  
+  .payment-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .payment-details input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .payment-details input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  
+  .payment-details button {
+    margin-top: 10px;
+  }
+  
+  .payment-details button:first-of-type {
+    background-color: #e74c3c;
+  }
+  
+  .payment-details button:first-of-type:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Thank You Page */
+  .thank-you {
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 50px auto;
+  }
+  
+  .thank-you h1 {
+    color: #27ae60;
+  }
+  
+  .thank-you p {
+    color: #7f8c8d;
+  }
+  
+  /* Admin Page */
+  .admin-page {
+    text-align: center;
+  }
+  
+  .admin-page h1 {
+    margin-bottom: 30px;
+  }
+  
+  .admin-donation {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    width: 300px;
+    margin: 0 auto 20px;
+  }
+  
+  .admin-donation p {
+    margin-bottom: 10px;
+  }
+  
+  .admin-donation button {
+    width: 48%;
+    margin: 5px 1%;
+  }
+  
+  .admin-donation button:first-of-type {
+    background-color: #27ae60;
+  }
+  
+  .admin-donation button:first-of-type:hover {
+    background-color: #219653;
+  }
+  
+  .admin-donation button:last-of-type {
+    background-color: #e74c3c;
+  }
+  
+  .admin-donation button:last-of-type:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .donation-page, .payment-details, .thank-you, .admin-donation {
+      max-width: 100%;
+      margin: 10px;
+      padding: 20px;
+    }
+  
+    .admin-donation button {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
