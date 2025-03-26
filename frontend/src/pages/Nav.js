@@ -81,6 +81,12 @@ function Nav() {
             <span className="nav-text">Sign Up</span>
           </Link>
         </div>
+        <div>
+          {/* Profile */}
+          <Link to="/profile" className="nav-item">
+            <span className="nav-text">Profile</span>
+          </Link>
+        </div>
       </nav>
 
       {/* Content Area */}

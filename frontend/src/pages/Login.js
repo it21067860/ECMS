@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import backgroundImage from "../assets/background.png";
+import "../pages/css/Login.css"
 
 const Login = () => {
     const [email, setEmail] = useState();
@@ -64,9 +65,24 @@ const Login = () => {
                             />
                         </div>
                         <button type="submit" className="btn btn-primary">Login</button>
+                        
                     </form>
                     {/* TO add ' appostopee */}
                     <p className='container my-2'>Don&apos;t have an account?</p>
+                    {/* Login using username*/}
+                    {/* Added divider */}
+                    <div className="d-flex align-items-center my-3">
+                        <hr className="flex-grow-1" />
+                        <span className="px-2">OR</span>
+                        <hr className="flex-grow-1" />
+                    </div>
+                    
+                    {/* Added username login button */}
+                    <div className="text-center">
+                        <Link to="/staff-login" className="btn btn-outline-primary">
+                            Login with username
+                        </Link>
+                    </div>
                     <Link to='/register' className="btn btn-secondary">Register</Link>
                 </div>
             </div>
