@@ -17,6 +17,7 @@ import ViewHome from "./pages/ViewHomeManage";
 
 import Donation from "./pages/Donation";
 import KayLogin from "./pages/Kay/KayLogin"
+import ApprovedHomes from "./pages/Kay/ApprovedHomes"; 
 
 
 const App = () => {
@@ -46,7 +47,9 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/reg" element={<Register />} />
           <Route path="/staff-login" element={<KayLogin />} />
+
           <Route path="/admin/dashboard" element={<KayAdminDashboard />} />
+          <Route path="/admin/approved-homes" element={<ApprovedHomes />} />
           
           <Route path="/profile" element={<Profile />} />
           <Route path="/land" element={<Land />} />
