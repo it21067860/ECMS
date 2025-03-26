@@ -12,14 +12,15 @@ const Home = () => {
         <h1 className="home-heading">Welcome to Safe Heaven</h1>
         <p className="home-subtext">Providing care and support for those in need.</p>
       </div>
-{/*<div className="navbar">
+
+        {/*<div className="navbar">
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/register-patient" className="nav-link">Register Patient</Link>
           <Link to="/view-patients" className="nav-link">View Patients</Link>
           <Link to="/register-doner" className="nav-link">Register Donor</Link>
           <Link to="/profile" className="nav-link">Profile</Link>
         </div>*/}
-        
+
         <div className="services-container">
       
           <div className="service-card">
@@ -34,11 +35,14 @@ const Home = () => {
             <Link to="/register-Home" className="service-link">Learn More</Link>
           </div>
           
-  
           <div className="service-card">
             <h3>Volunteer Registration</h3>
             <p>Join our team of dedicated volunteers to help support those in need in our community.</p>
+
+            <Link to="/volunteer" className="service-link">Learn More</Link>
+
             <Link to="/volunteer-register" className="service-link">Learn More</Link>
+
           </div>
           
           <div className="service-card">
