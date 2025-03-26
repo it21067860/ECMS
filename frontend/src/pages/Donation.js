@@ -107,7 +107,7 @@ const Donation = () => {
             <h3>{selectedHome.homeName}</h3>
             <p><strong>Description:</strong> {selectedHome.homeDescription}</p>
             <p><strong>Type:</strong> {selectedHome.homeType}</p>
-            <p><strong>Account Number:</strong> {selectedHome.homeOwnerContact || "1234-5678-9012"}</p> {/* Placeholder if no account field */}
+            <p><strong>Account Number:</strong> {selectedHome.accountNumber || "1234-5678-9012"}</p> {/* Placeholder if no account field */}
 
             <h4>Make a Donation</h4>
             <form onSubmit={handlePaymentSubmit}>
