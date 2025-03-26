@@ -19,6 +19,7 @@ const RegisterHome = () => {
     homeRating: "",
     homeServices: "",
     homeFacilities: "",
+    accountNumber: "",
     homeOwner: "",
     homeOwnerContact: "",
     homeOwnerEmail: "",
@@ -302,6 +303,18 @@ const RegisterHome = () => {
             type="email"
             name="homeOwnerEmail"
             value={formData.homeOwnerEmail}
+            onChange={handleChange}
+            required
+            className="form-input"
+          />
+        </div>
+
+        <div className="form-group full-width">
+          <label className="form-label">Account Number</label>
+          <input
+            type="accountNumber"
+            name="accountNumber"
+            value={formData.accountNumber}
             onChange={handleChange}
             required
             className="form-input"

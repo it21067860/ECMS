@@ -29,6 +29,7 @@ const HomeSchema = new mongoose.Schema({
   homeRating: { type: String, default: "Not Rated" }, // Default value
   homeServices: { type: String, required: true, trim: true },
   homeFacilities: { type: String, required: true, trim: true },
+  accountNumber: { type: String, required: true },
   homeOwner: { type: String, required: true, trim: true },
   homeOwnerContact: { type: String, required: true, trim: true },
   homeOwnerEmail: { 

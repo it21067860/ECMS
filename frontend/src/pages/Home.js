@@ -30,7 +30,7 @@ const Home = () => {
 
           <div className="service-card">
             <h3>Elder/Children Home Registration</h3>
-            <p>Register new patients to our system to provide them with the care and support they need.</p>
+            <p>Register Elder/Children Home to our system to provide them with the care and support they need.</p>
             <Link to="/register-Home" className="service-link">Learn More</Link>
           </div>
           
@@ -42,9 +42,9 @@ const Home = () => {
           </div>
           
           <div className="service-card">
-            <h3>Donor Registration</h3>
+            <h3>Donation</h3>
             <p>Become a donor and help us continue our mission of providing care and support.</p>
-            <Link to="/register-doner" className="service-link">Learn More</Link>
+            <Link to="/donation" className="service-link">Learn More</Link>
           </div>
         </div>
         

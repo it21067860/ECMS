@@ -14,8 +14,9 @@ import KayAdminDashboard from "./pages/Kay/KayAdminDashboard";
 import Land from "./pages/landing";
 import RegisterHome from "./pages/homeManage";
 import ViewHome from "./pages/ViewHomeManage";
-import KayLogin from "./pages/Kay/KayLogin"
 
+import Donation from "./pages/Donation";
+import KayLogin from "./pages/Kay/KayLogin"
 
 
 const App = () => {
@@ -31,10 +32,15 @@ const App = () => {
           
           <Route path="/register-Home" element={<RegisterHome />} />
           <Route path="/view-Home" element={<ViewHome />} />*/
-      
+
           <Route path="/register-doner" element={<RegisterUser />} />
           <Route path="/volunteer-register" element={<VolunteerRegister />} />
+
           <Route path="/volunteer-view" element={<VolunteerView />} />
+           {/*<Route path="/register-doner" element={<RegisterUser />} />*/}
+          <Route path="/donation" element={<Donation />} />
+
+
 
 
           <Route path="/login" element={<Login />} />
