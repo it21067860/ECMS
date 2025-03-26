@@ -1,0 +1,102 @@
+/* donation.css */
+.home-container1 {
+    background-image: url('../../assets/background3.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .home-heading {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .home-subtext {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    max-width: 2000px;
+  }
+  
+  .service-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: #333;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-card h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .service-card p {
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .service-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .service-link::after {
+    content: '→';
+    margin-left: 5px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .service-link:hover::after {
+    margin-left: 10px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 123, 255, 0.8);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(0, 123, 255, 1);
+  }

@@ -64,7 +64,7 @@ function Nav() {
             <span className="nav-text">Contact Us</span>
           </Link>
           <Link to="/blog" className="nav-item">
-            <span className="nav-text">Blog</span>
+            <span className="nav-text">Donation</span>
           </Link>
         </div>
 

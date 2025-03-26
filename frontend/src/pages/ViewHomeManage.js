@@ -91,6 +91,7 @@ const ViewHomeManage = () => {
             <th style={styles.th}>Email</th>
             <th style={styles.th}>Capacity</th>
             <th style={styles.th}>Type</th>
+            <th style={styles.th}>Account Number</th>
             <th style={styles.th}>Approved</th>
             <th style={styles.th}>Actions</th>
           </tr>
@@ -109,6 +110,7 @@ const ViewHomeManage = () => {
                 <td style={styles.td}>{home.homeEmail}</td>
                 <td style={styles.td}>{home.homeCapacity}</td>
                 <td style={styles.td}>{home.homeType}</td>
+                <td style={styles.td}>{home.accountNumber || "N/A"} </td>
                 <td style={styles.td}>{home.approved ? "Yes" : "No"}</td>
                 <td style={styles.td}>
                   <button
@@ -164,6 +166,7 @@ const ViewHomeManage = () => {
             <p><strong>Owner:</strong> {selectedHome.homeOwner}</p>
             <p><strong>Owner Contact:</strong> {selectedHome.homeOwnerContact}</p>
             <p><strong>Owner Email:</strong> {selectedHome.homeOwnerEmail}</p>
+            <p><strong>Account Number:</strong> {selectedHome.accountNumber || "N/A"}</p>
             {selectedHome.homeImage1 && (
               <img src={selectedHome.homeImage1} alt="Home 1" style={styles.image} />
             )}
