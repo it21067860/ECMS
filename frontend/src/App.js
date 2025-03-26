@@ -11,7 +11,7 @@ import Register from "./pages/Register";
 import Land from "./pages/landing";
 import RegisterHome from "./pages/homeManage";
 import ViewHome from "./pages/ViewHomeManage";
-
+import Donation from "./pages/Donation";
 
 const App = () => {
   return (
@@ -27,7 +27,8 @@ const App = () => {
           <Route path="/register-Home" element={<RegisterHome />} />
           <Route path="/view-Home" element={<ViewHome />} />*/
       
-          <Route path="/register-doner" element={<RegisterUser />} />
+           {/*<Route path="/register-doner" element={<RegisterUser />} />*/}
+          <Route path="/donation" element={<Donation />} />
 
 
           <Route path="/login" element={<Login />} />
