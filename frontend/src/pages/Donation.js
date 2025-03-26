@@ -135,7 +135,7 @@ const Donation = () => {
         <div className="popup-overlay">
           <div className="popup-content">
             <h3>{selectedHome.homeName}</h3>
-            <p><strong>Description:</strong> {selectedHome.homeDescription}</p>
+           
             <p><strong>Type:</strong> {selectedHome.homeType}</p>
             <p><strong>Account Number:</strong> {selectedHome.accountNumber || "1234-5678-9012"}</p>
             <p><strong>Year target:</strong></p>
@@ -157,7 +157,7 @@ const Donation = () => {
           <div className="popup-content">
             <h3>Make Your Donation to {selectedHome.homeName}</h3>
             <p><strong>Type:</strong> {selectedHome.homeType}</p>
-            <p><strong>Description:</strong> {selectedHome.homeDescription}</p>
+           
 
             <form onSubmit={handlePaymentSubmit}>
               <label>
