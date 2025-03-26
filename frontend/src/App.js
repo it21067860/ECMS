@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import RegisterPatient from "./pages/RegisterPatient";
 import ViewPatients from "./pages/ViewPatients";
 import VolunteerRegister from "./pages/Kay/VolunteerRegister";
+import VolunteerView from "./pages/Kay/VolunteerView";
 import Navbar from "./components/Navbar"; // ✅ Import the Navbar
 import Login from "./pages/Login";
 import RegisterUser from "./pages/RegisterUser";
@@ -33,6 +34,7 @@ const App = () => {
       
           <Route path="/register-doner" element={<RegisterUser />} />
           <Route path="/volunteer-register" element={<VolunteerRegister />} />
+          <Route path="/volunteer-view" element={<VolunteerView />} />
 
 
           <Route path="/login" element={<Login />} />

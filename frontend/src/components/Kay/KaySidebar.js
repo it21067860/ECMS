@@ -32,6 +32,9 @@ const KaySidebar = () => {
         <Link to="/view-patients" className="kay-sidebar-link">
           View patient
         </Link>
+        <Link to="/volunteer-view" className="kay-sidebar-link">
+          Volunteer
+        </Link>
         <button onClick={handleLogout} className="kay-sidebar-logout">
           Logout
         </button>
