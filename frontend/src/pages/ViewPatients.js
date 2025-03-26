@@ -1,34 +1,50 @@
 import React, { useEffect, useState } from "react";
 import { getPatients, deletePatient } from "../api/patientService";
+import { useNavigate } from "react-router-dom"; // For navigation
 
 const ViewPatients = () => {
   const [patients, setPatients] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate(); // Navigation hook
 
   // Fetch patients from backend
   useEffect(() => {
     getPatients()
       .then((data) => {
-        console.log("Patients received:", data); // Debugging
+        console.log("Patients received:", data);
         setPatients(data);
       })
       .catch((error) => console.error("Error fetching patient data:", error));
   }, []);
-  
+
   // Delete a patient
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this patient?")) {
+      setLoading(true);
+      setError(null);
+
       try {
         await deletePatient(id);
         setPatients(patients.filter((patient) => patient._id !== id));
       } catch (error) {
-        console.error("Error deleting patient:", error);
+        console.error("Error deleting patient:", error.response || error);
+        setError("Failed to delete patient. Please try again.");
+      } finally {
+        setLoading(false);
       }
     }
   };
 
+  // Handle Update (Navigate to Update Page)
+  const handleUpdate = (id) => {
+    navigate(`/update-patient/${id}`); // Redirect to update form
+  };
+
   return (
-    <div style={{ maxWidth: "900px", margin: "auto", padding: "20px", fontFamily: "Arial, sans-serif" }}>
+    <div style={{ maxWidth: "1000px", margin: "auto", padding: "20px", fontFamily: "Arial, sans-serif" }}>
       <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Patient List</h2>
+      {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
       <table style={{ width: "100%", borderCollapse: "collapse", border: "1px solid #ddd" }}>
         <thead>
           <tr style={{ background: "#f4f4f4" }}>
@@ -36,6 +52,7 @@ const ViewPatients = () => {
             <th style={styles.th}>Age</th>
             <th style={styles.th}>Gender</th>
             <th style={styles.th}>Contact</th>
+            <th style={styles.th}>Medical History</th>
             <th style={styles.th}>Actions</th>
           </tr>
         </thead>
@@ -47,7 +64,14 @@ const ViewPatients = () => {
                 <td style={styles.td}>{patient.age}</td>
                 <td style={styles.td}>{patient.gender}</td>
                 <td style={styles.td}>{patient.contactNumber}</td>
+                <td style={styles.td}>{patient.medicalHistory || "N/A"}</td>
                 <td style={styles.td}>
+                  <button
+                    onClick={() => handleUpdate(patient._id)}
+                    style={{ padding: "5px 10px", marginRight: "5px", backgroundColor: "blue", color: "white", border: "none", cursor: "pointer" }}
+                  >
+                    Update
+                  </button>
                   <button
                     onClick={() => handleDelete(patient._id)}
                     style={{ padding: "5px 10px", backgroundColor: "red", color: "white", border: "none", cursor: "pointer" }}
@@ -59,7 +83,7 @@ const ViewPatients = () => {
             ))
           ) : (
             <tr>
-              <td colSpan="5" style={{ textAlign: "center", padding: "10px" }}>
+              <td colSpan="6" style={{ textAlign: "center", padding: "10px" }}>
                 No patients found.
               </td>
             </tr>
@@ -70,7 +94,7 @@ const ViewPatients = () => {
   );
 };
 
-// CSS Styles as JS Objects
+// CSS Styles
 const styles = {
   th: { padding: "10px", textAlign: "left", borderBottom: "1px solid #ddd" },
   td: { padding: "10px", borderBottom: "1px solid #ddd" },

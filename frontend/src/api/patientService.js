@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8079/api/patients/register"; // Backend API base URL
+const API_URL = "http://localhost:8079/api/patients"; // Backend API base URL
 
 // Fetch all patients
 export const getPatients = async () => {
   try {
-    const response = await axios.get("http://localhost:8079/api/patients");
+    const response = await axios.get(API_URL);
     return response.data;
   } catch (error) {
     console.error("Error fetching patients:", error);
@@ -16,7 +16,7 @@ export const getPatients = async () => {
 // Fetch a single patient by ID
 export const getPatientById = async (id) => {
   try {
-    const response = await axios.get(`${"http://localhost:8079/api/patients"}/${id}`);
+    const response = await axios.get(`${API_URL}/${id}`);
     return response.data;
   } catch (error) {
     console.error("Error fetching patient:", error);

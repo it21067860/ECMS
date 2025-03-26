@@ -1,0 +1,46 @@
+.volunteer-register-container {
+    width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .volunteer-register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .volunteer-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .volunteer-form input,
+  .volunteer-form select {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .volunteer-form label {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  .volunteer-form button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .volunteer-form button:hover {
+    background-color: #0056b3;
+  }
+  

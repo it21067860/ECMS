@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import RegisterPatient from "./pages/RegisterPatient";
 import ViewPatients from "./pages/ViewPatients";
+import VolunteerRegister from "./pages/Kay/VolunteerRegister";
 import Navbar from "./components/Navbar"; // ✅ Import the Navbar
 import Login from "./pages/Login";
 import RegisterUser from "./pages/RegisterUser";
@@ -30,9 +31,12 @@ const App = () => {
           
           <Route path="/register-Home" element={<RegisterHome />} />
           <Route path="/view-Home" element={<ViewHome />} />*/
-      
+
+          <Route path="/register-doner" element={<RegisterUser />} />
+          <Route path="/volunteer-register" element={<VolunteerRegister />} />
            {/*<Route path="/register-doner" element={<RegisterUser />} />*/}
           <Route path="/donation" element={<Donation />} />
+
 
 
           <Route path="/login" element={<Login />} />
