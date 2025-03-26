@@ -298,9 +298,11 @@ const ApprovedHomes = () => {
         setPendingHomes(pendingHomes.filter((home) => home._id !== id));
         setProcessedHomes([...processedHomes, { ...homeToReject, rejected: true }]);
         console.log(`Home with ID ${id} rejected successfully`);
+        
       } catch (error) {
         console.error("Error rejecting home:", error);
         setError(error.message || "Failed to reject home. Please try again.");
+
       } finally {
         setLoading(false);
       }
