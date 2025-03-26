@@ -1,0 +1,23 @@
+.kay-admin-dashboard {
+  display: flex;
+}
+
+.kay-sidebar {
+  width: 200px;
+  background: #34495e;
+  color: white;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.kay-sidebar a {
+  display: block;
+  color: white;
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+.kay-admin-content {
+  flex: 1;
+  padding: 2rem;
+}
