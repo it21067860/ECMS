@@ -72,6 +72,7 @@ const KayAdminDashboard = () => {
           ))}
         </section>
 
+
         <section>
           <h2>Approved Homes ({approvedCaregivers.length})</h2>
           {approvedCaregivers.map((caregiver) => (
@@ -79,6 +80,8 @@ const KayAdminDashboard = () => {
           ))}
 
         </section>
+
+    
       </div>
     </div>
   );
