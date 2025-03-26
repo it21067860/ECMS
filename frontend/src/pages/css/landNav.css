@@ -1,0 +1,84 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+ /* .navbar-logo {
+    color: #007bff; /* Blue color to match the screenshot *
+    text-decoration: none;
+  }*/
+
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 2rem;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-link {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+
+  .nav-link:hover {
+    color: #007bff; /* Blue on hover to match the theme */
+  }
+  
+  /* Style the Login and Sign Up links as buttons */
+  .navbar-links li:last-child .nav-link,
+  .navbar-links li:nth-last-child(2) .nav-link {
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue background for buttons */
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .navbar-links li:last-child .nav-link:hover,
+  .navbar-links li:nth-last-child(2) .nav-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-links {
+      margin-top: 10px;
+      flex-direction: column;
+    }
+  
+    .nav-link {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    .navbar-links li:last-child .nav-link,
+    .navbar-links li:nth-last-child(2) .nav-link {
+      margin-left: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
