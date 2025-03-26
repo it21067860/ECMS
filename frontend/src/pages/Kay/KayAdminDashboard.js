@@ -71,12 +71,21 @@ const KayAdminDashboard = () => {
             <KayCaregiverCard key={caregiver._id} caregiver={caregiver} />
           ))}
         </section>
-      
-        
-        
+
+
+        <section>
+          <h2>Approved Homes ({approvedCaregivers.length})</h2>
+          {approvedCaregivers.map((caregiver) => (
+            <KayCaregiverCard key={caregiver._id} caregiver={caregiver} />
+          ))}
+
+        </section>
+
+    
       </div>
     </div>
   );
 };
 
 export default KayAdminDashboard;
+
