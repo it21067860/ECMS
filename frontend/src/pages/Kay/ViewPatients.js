@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { getPatients, deletePatient } from "../../api/patientService";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const ViewPatients = () => {
   const [patients, setPatients] = useState([]);
+  const navigate = useNavigate(); // Initialize navigate
 
   // Fetch patients from backend
   useEffect(() => {
     getPatients()
       .then((data) => {
-        console.log("Patients received:", data); // Debugging
+        console.log("Patients received:", data);
         setPatients(data);
       })
       .catch((error) => console.error("Error fetching patient data:", error));
@@ -26,6 +28,11 @@ const ViewPatients = () => {
     }
   };
 
+  // Handle Update (Navigate to Update Page)
+  const handleUpdate = (id) => {
+    navigate(`/update-patient/${id}`); // Redirect to update form
+  };
+
   return (
     <div style={{ maxWidth: "900px", margin: "auto", padding: "20px", fontFamily: "Arial, sans-serif" }}>
       <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Patient List</h2>
@@ -36,6 +43,7 @@ const ViewPatients = () => {
             <th style={styles.th}>Age</th>
             <th style={styles.th}>Gender</th>
             <th style={styles.th}>Contact</th>
+            <th style={styles.th}>Medical History</th>
             <th style={styles.th}>Actions</th>
           </tr>
         </thead>
@@ -47,7 +55,14 @@ const ViewPatients = () => {
                 <td style={styles.td}>{patient.age}</td>
                 <td style={styles.td}>{patient.gender}</td>
                 <td style={styles.td}>{patient.contactNumber}</td>
+                <td style={styles.td}>{patient.medicalHistory || "N/A"}</td>
                 <td style={styles.td}>
+                  <button
+                    onClick={() => handleUpdate(patient._id)}
+                    style={{ padding: "5px 10px", marginRight: "5px", backgroundColor: "blue", color: "white", border: "none", cursor: "pointer" }}
+                  >
+                    Update
+                  </button>
                   <button
                     onClick={() => handleDelete(patient._id)}
                     style={{ padding: "5px 10px", backgroundColor: "red", color: "white", border: "none", cursor: "pointer" }}
@@ -59,7 +74,7 @@ const ViewPatients = () => {
             ))
           ) : (
             <tr>
-              <td colSpan="5" style={{ textAlign: "center", padding: "10px" }}>
+              <td colSpan="6" style={{ textAlign: "center", padding: "10px" }}>
                 No patients found.
               </td>
             </tr>
