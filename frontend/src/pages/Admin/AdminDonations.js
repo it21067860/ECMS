@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getAllDonations, approveDonation, rejectDonation } from "../../api/homeManageService";
+import { getAllDonations, approveDonation, rejectDonation } from "../../api/donationServis";
 import KaySidebar from "../../components/Kay/KaySidebar";
 
 const AdminDonations = () => {

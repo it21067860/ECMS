@@ -40,6 +40,22 @@ const HomeSchema = new mongoose.Schema({
   },
   homeOwnerImage: { type: String }, // Base64 string
   approved: { type: Boolean, default: false }, // Approval status
+  totalDonations: {
+    type: Number,
+    default: 0,
+  },
+  pendingDonations: {
+    type: Number,
+    default: 0,
+  },
+  approvedDonations: {
+    type: Number,
+    default: 0,
+  },
+  rejectedDonations: {
+    type: Number,
+    default: 0,
+  },
 }, { 
   timestamps: true 
 });
