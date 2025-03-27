@@ -39,7 +39,7 @@ const Home = () => {
             <h3>Volunteer Registration</h3>
             <p>Join our team of dedicated volunteers to help support those in need in our community.</p>
 
-            <Link to="/volunteer" className="service-link">Learn More</Link>
+            
 
             <Link to="/volunteer-register" className="service-link">Learn More</Link>
 

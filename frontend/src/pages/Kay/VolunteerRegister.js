@@ -84,6 +84,6 @@ export default function VolunteerRegister() {
 
         <button type="submit">Register</button>
       </form>
-    </div>
-  );
+    </div>
+  );
 }
