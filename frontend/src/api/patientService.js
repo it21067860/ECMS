@@ -27,7 +27,7 @@ export const getPatientById = async (id) => {
 // Register a new patient
 export const addPatient = async (patientData) => {
   try {
-    const response = await axios.post(API_URL, patientData);
+    const response = await axios.post("http://localhost:8079/api/patients/register", patientData);
     return response.data;
   } catch (error) {
     console.error("Error adding patient:", error);
